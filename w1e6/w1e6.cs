@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace w1e5
+namespace w1e6
 {
     internal class Program
     {
@@ -17,7 +17,15 @@ namespace w1e5
             while (guess != goal)
             {
                 points++;
-                guess = takeGuess(min, max);
+                if (points % 2 > 0)
+                {
+                    guess = takeGuess(min, max);
+                }
+                else
+                {
+                    guess = (min + max) / 2;
+                    Console.WriteLine($"The opponent guesses: {guess}.");
+                }
                 if (guess < goal)
                 {
                     Console.WriteLine($"The hidden number is greater then {guess}.");
@@ -29,8 +37,14 @@ namespace w1e5
                     max = guess - 1;
                 }
             }
-
-            Console.WriteLine($"Good jobb, you solved it in {points} tries.");
+            if (points % 2 > 0)
+            {
+                Console.WriteLine($"Good jobb, you solved it on the {points} round.");
+            }
+            else 
+            {
+                Console.WriteLine($"Bad luck, opponent solved it on the {points} round.");
+            }
         }
 
         private static int takeGuess(int min, int max)

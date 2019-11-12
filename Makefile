@@ -1,4 +1,4 @@
-all: w1e1 w1e2 w1e3 w1e4
+all: w1e1 w1e2 w1e3 w1e4 w1e5
 
 w1e1: build/w1e1.exe
 build/w1e1.exe: w1e1/w1e1.cs
@@ -15,3 +15,7 @@ build/w1e3.exe: w1e3/w1e3.cs
 w1e4: build/w1e4.exe
 build/w1e3.exe: w1e4/w1e4.cs
 	mcs w1e4/w1e4.cs -out:build/w1e4.exe
+
+w1e5: build/w1e5.exe
+build/w1e3.exe: w1e5/w1e5.cs
+	mcs w1e5/w1e5.cs -out:build/w1e5.exe

@@ -25,7 +25,7 @@ namespace w1e1
                 }
                 catch (FormatException)
                 {
-                    Console.WriteLine("That's not a number, try again");
+                    Console.Error.WriteLine("That's not a number, try again");
                 }
             }
         }

@@ -19,14 +19,13 @@ namespace w1e1
             {
                 Console.Write(question);
                 Console.WriteLine(": ");
-                var a = Console.ReadLine();
                 try
                 {
-                    return Int32.Parse(a);
+                    return Int32.Parse(Console.ReadLine() ?? throw new FormatException());
                 }
                 catch (FormatException)
                 {
-                    Console.Write("That's not a number, try again");
+                    Console.WriteLine("That's not a number, try again");
                 }
             }
         }

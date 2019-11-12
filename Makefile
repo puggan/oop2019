@@ -1,37 +1,37 @@
-all: w1e1 w1e2 w1e3 w1e4 w1e5 w1e6 w1e7 w1e8 w1e9
+all: w1e01 w1e02 w1e03 w1e04 w1e05 w1e06 w1e07 w1e08 w1e09
 
-w1e1: build/w1e1.exe
-build/w1e1.exe: w1e1/w1e1.cs
-	mcs w1e1/w1e1.cs -out:build/w1e1.exe
+w1e01: build/w1e01.exe
+build/w1e01.exe: w1e01/w1e01.cs
+	mcs w1e01/w1e01.cs -out:build/w1e01.exe
 
-w1e2: build/w1e2.exe
-build/w1e2.exe: w1e2/w1e2.cs
-	mcs w1e2/w1e2.cs -out:build/w1e2.exe
+w1e02: build/w1e02.exe
+build/w1e02.exe: w1e02/w1e02.cs
+	mcs w1e02/w1e02.cs -out:build/w1e02.exe
 
-w1e3: build/w1e3.exe
-build/w1e3.exe: w1e3/w1e3.cs
-	mcs w1e3/w1e3.cs -out:build/w1e3.exe
+w1e03: build/w1e03.exe
+build/w1e03.exe: w1e03/w1e03.cs
+	mcs w1e03/w1e03.cs -out:build/w1e03.exe
 
-w1e4: build/w1e4.exe
-build/w1e4.exe: w1e4/w1e4.cs
-	mcs w1e4/w1e4.cs -out:build/w1e4.exe
+w1e04: build/w1e04.exe
+build/w1e04.exe: w1e04/w1e04.cs
+	mcs w1e04/w1e04.cs -out:build/w1e04.exe
 
-w1e5: build/w1e5.exe
-build/w1e5.exe: w1e5/w1e5.cs
-	mcs w1e5/w1e5.cs -out:build/w1e5.exe
+w1e05: build/w1e05.exe
+build/w1e05.exe: w1e05/w1e05.cs
+	mcs w1e05/w1e05.cs -out:build/w1e05.exe
 
-w1e6: build/w1e6.exe
-build/w1e6.exe: w1e6/w1e6.cs
-	mcs w1e6/w1e6.cs -out:build/w1e6.exe
+w1e06: build/w1e06.exe
+build/w1e06.exe: w1e06/w1e06.cs
+	mcs w1e06/w1e06.cs -out:build/w1e06.exe
 
-w1e7: build/w1e7.exe
-build/w1e7.exe: w1e7/w1e7.cs
-	mcs w1e7/w1e7.cs -out:build/w1e7.exe
+w1e07: build/w1e07.exe
+build/w1e07.exe: w1e07/w1e07.cs
+	mcs w1e07/w1e07.cs -out:build/w1e07.exe
 
-w1e8: build/w1e8.exe
-build/w1e8.exe: w1e8/w1e8.cs
-	mcs w1e8/w1e8.cs -out:build/w1e8.exe
+w1e08: build/w1e08.exe
+build/w1e08.exe: w1e08/w1e08.cs
+	mcs w1e08/w1e08.cs -out:build/w1e08.exe
 
-w1e9: build/w1e9.exe
-build/w1e9.exe: w1e9/w1e9.cs
-	mcs w1e9/w1e9.cs -out:build/w1e9.exe
+w1e09: build/w1e09.exe
+build/w1e09.exe: w1e09/w1e09.cs
+	mcs w1e09/w1e09.cs -out:build/w1e09.exe

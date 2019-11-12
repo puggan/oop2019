@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace w1e6
+namespace w1e06
 {
     internal class Program
     {

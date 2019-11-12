@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace w1e7
+namespace w1e07
 {
     internal class Program
     {

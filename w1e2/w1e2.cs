@@ -29,10 +29,14 @@ namespace w1e1
             
             for (int year = firstYear; year <= lastYear; year++)
             {
-                if(year % 4 > 0 || year % 100 == 0 && year % 400 > 0)
-                    Console.WriteLine($"{year}");
+                if (year % 4 > 0 || year % 100 == 0 && year % 400 > 0)
+                {
+                    Console.WriteLine($"❌ {year}");
+                }
                 else
-                    Console.WriteLine($"{year} *");
+                {
+                    Console.WriteLine($"✔ {year}");
+                }
             }
         }
 

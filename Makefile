@@ -1,4 +1,4 @@
-all: w1e01 w1e02 w1e03 w1e04 w1e05 w1e06 w1e07 w1e08 w1e09 w1e10 w1e11 w1e12
+all: w1e01 w1e02 w1e03 w1e04 w1e05 w1e06 w1e07 w1e08 w1e09 w1e10 w1e11 w1e12 w1e13
 
 w1e01: build/w1e01.exe
 build/w1e01.exe: w1e01/w1e01.cs
@@ -47,3 +47,7 @@ build/w1e11.exe: w1e11/w1e11.cs
 w1e12: build/w1e12.exe
 build/w1e12.exe: w1e12/w1e12.cs
 	mcs w1e12/w1e12.cs -out:build/w1e12.exe
+
+w1e13: build/w1e13.exe
+build/w1e13.exe: w1e13/w1e13.cs w1e13/bag.cs
+	mcs w1e13/w1e13.cs w1e13/bag.cs -out:build/w1e13.exe

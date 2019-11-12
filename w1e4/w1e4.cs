@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-namespace w1e1
+namespace w1e4
 {
     internal class Program
     {

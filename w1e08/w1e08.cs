@@ -6,6 +6,7 @@ namespace w1e08
     {
         public static void Main(string[] args)
         {
+            Console.ResetColor();
             int size = ReadInt("Please input size of tree");
             if (size < 2)
             {
@@ -20,10 +21,17 @@ namespace w1e08
                 {
                     Console.Write(new String(' ', size - row));
                 }
-                Console.WriteLine(new String('*', 2 * row + 1));
+                Console.BackgroundColor = ConsoleColor.Green;
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.Write(new String('*', 2 * row + 1));
+                Console.ResetColor();
+                Console.WriteLine();
             }
             Console.Write(new String(' ', size - 1));
-            Console.WriteLine(new String("[ ]"));
+            Console.BackgroundColor = ConsoleColor.DarkYellow; //Brown;
+            Console.Write(new String("[ ]"));
+            Console.ResetColor();
+            Console.WriteLine();
         }
 
         private static int ReadInt(string question)

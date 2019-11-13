@@ -29,7 +29,7 @@ namespace w1e10
             width = invader[0].Length;
             posx = 0;
             posy = 0;
-            maxx = Console.LargestWindowWidth - width;
+            maxx = Console.LargestWindowWidth/2 - width;
             maxy = Console.LargestWindowHeight - height;
             /*
             Console.WriteLine($"Size: {maxx} x {maxy}");
@@ -72,7 +72,7 @@ namespace w1e10
             int y = starty;
             foreach (string row in invader)
             {
-                Console.SetCursorPosition(startx, y++);
+                Console.SetCursorPosition(startx * 2, y++);
                 Console.WriteLine(row);
             }
         }
@@ -86,10 +86,11 @@ namespace w1e10
             
             for(var y = 0; y < height; y++)
             {
-                char[] charRow = new char[width];
+                char[] charRow = new char[2*width];
                 for (var x = 0; x < width; x++)
                 {
-                    charRow[x] = invaderInts[y,x] > 0 ? '*' : ' ';
+                    charRow[2*x] = invaderInts[y,x] > 0 ? '*' : ' ';
+                    charRow[2*x+1] = invaderInts[y,x] > 0 ? '*' : ' ';
                 }
 
                 result[y] = new String(charRow);

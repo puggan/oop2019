@@ -21,12 +21,12 @@ namespace w1e02
                 firstYear = 1582;
             }
 
-            if(lastYear <= 9999)
+            if(lastYear > 9999)
             {
                 Console.Error.WriteLine("I'm not sure we going to use the Gregorian calendar for that long...");
                 return;
             }
-            
+
             for (int year = firstYear; year <= lastYear; year++)
             {
                 if (year % 4 > 0 || year % 100 == 0 && year % 400 > 0)

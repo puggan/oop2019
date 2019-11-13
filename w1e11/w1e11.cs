@@ -10,7 +10,7 @@ namespace w1e11
         {
             string formula = String.Join(" ", args);
             float result = CalculateString(formula);
-            Console.Write($"{formula} = {result}");
+            Console.WriteLine($"{formula} = {result}");
         }
 
         public static float CalculateString(string formula)

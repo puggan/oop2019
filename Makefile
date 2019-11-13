@@ -49,5 +49,5 @@ build/w1e12.exe: w1e12/w1e12.cs
 	mcs w1e12/w1e12.cs -out:build/w1e12.exe
 
 w1e13: build/w1e13.exe
-build/w1e13.exe: w1e13/w1e13.cs w1e13/bag.cs
-	mcs w1e13/w1e13.cs w1e13/bag.cs -out:build/w1e13.exe
+build/w1e13.exe: w1e13/w1e13.cs w1e13/bag.cs w1e13/TetrisBlock.cs
+	mcs w1e13/w1e13.cs w1e13/bag.cs w1e13/TetrisBlock.cs -out:build/w1e13.exe

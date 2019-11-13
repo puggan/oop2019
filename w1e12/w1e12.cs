@@ -7,31 +7,38 @@ namespace w1e12
     {
         public static void Main(string[] args)
         {
+            List<ConsoleColor> partColors = new List<ConsoleColor>();
             List<byte[,]> parts = new List<byte[,]>();
+            // @see https://en.wikipedia.org/wiki/Tetris#/media/File:Tetrominoes_IJLO_STZ_Worlds.svg
             // @see https://pradeep1210.files.wordpress.com/2010/02/tetrisshapes5b35d.jpg
+
+            partColors.Add(ConsoleColor.Cyan);
             parts.Add(new byte[,] { { 1, 1, 1, 1 } }); // I
+            partColors.Add(ConsoleColor.Blue);
             parts.Add(new byte[,] { { 1, 0, 0 }, { 1, 1, 1 } }); // J
+            partColors.Add(ConsoleColor.DarkYellow);
             parts.Add(new byte[,] { { 1, 1, 1 }, { 1, 0, 0 } }); // L
+            partColors.Add(ConsoleColor.Yellow);
             parts.Add(new byte[,] { { 1, 1 }, { 1, 1 } }); // O
+            partColors.Add(ConsoleColor.Green);
             parts.Add(new byte[,] { { 0, 1, 1 }, { 1, 1, 0 } }); // S
+            partColors.Add(ConsoleColor.DarkMagenta);
             parts.Add(new byte[,] { { 1, 1, 1 }, { 0, 1, 0 } }); // T
+            partColors.Add(ConsoleColor.Red);
             parts.Add(new byte[,] { { 1, 1, 0 }, { 0, 1, 1 } }); // Z
-            
-            foreach(byte[,] part in parts)
+
+            Console.Clear();
+            for(int row = 0; row < parts.Count; row++)
             {
-                print(part);
-                byte[,] view = part;
-                for (int r = 0; r < 4; r++)
+                byte[,] part = parts[row];
+                print(part, 1, 1 + 5 * row, partColors[row]);
+                for (int col = 0; col < 4; col++)
                 {
-                    view = rotateCW(view);
-                    //view = rotateCCW(view);
-                    Console.WriteLine();
-                    print(view);
+                    part = rotateCW(part);
+                    print(part, 6 + 5 * col, 1 + 5 * row, partColors[row]);
                 }
-                Console.WriteLine();
-                Console.WriteLine("--");
-                Console.WriteLine();
             }
+            Console.SetCursorPosition(0, 1 + 5 *parts.Count);
         }
 
         public static byte[,] rotateCW(byte[,] part)
@@ -66,18 +73,26 @@ namespace w1e12
             return partCopy;
         }
 
-        public static void print(byte[,] part)
+        public static void print(byte[,] part, int xStart, int yStart, ConsoleColor c)
         {
+            bool restart;
+            Console.BackgroundColor = c;
             for(int y = 0; y < part.GetLength(0); y++)
             {
-                char[] row = new char[part.GetLength(1)];
+                restart = true;
                 for(int x = 0; x < part.GetLength(1); x++)
                 {
-                    row[x] = part[y, x] > 0 ? 'X' : '.';
+                    if(part[y, x] > 0) {
+			if(restart) {
+                            Console.SetCursorPosition(2 * (xStart + x), yStart + y);
+                        }
+                        Console.Write("  ");
+                    } else {
+                       restart = true;
+                    }
                 }
-
-                Console.WriteLine(row);
             }
+            Console.ResetColor();
         }
     }
 }

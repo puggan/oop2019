@@ -25,6 +25,7 @@ namespace w1e07
         public void bar()
         {
             Console.BackgroundColor = (ConsoleColor)(8 + random.Next(8));
+            // WriteLine paint the hole line in Bash, but seams to have problems in cmd
             Console.WriteLine();
         }
     }

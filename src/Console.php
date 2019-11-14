@@ -165,4 +165,20 @@ class Console
         $cache = [$ini['COLUMNS'], $ini['LINES']];
         return $cache;
     }
+
+    /**
+     * @param string $question
+     * @return int
+     */
+    public static function ReadInt(string $question): int
+    {
+        while (true) {
+            echo $question, ': ';
+            $number = trim(self::ReadLine());
+            if (is_numeric($number)) {
+                return +$number;
+            }
+            self::ErrorWriteLine("That's not a number, try again");
+        }
+    }
 }

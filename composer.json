@@ -1,0 +1,19 @@
+{
+  "name": "puggan/oop2019-php",
+  "type": "project",
+  "require": {
+    "php": "^7.3"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Thorbjörn Sundragon",
+      "email": "puggan@sundragon.se"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Puggan\\Oop2019\\": "src/"
+    }
+  }
+}

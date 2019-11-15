@@ -58,9 +58,9 @@ class Console
     /**
      * Clear the screen
      */
-    public static function Clear(): void
+    public static function Clear($channel = null): void
     {
-        throw new \RuntimeException(__METHOD__ . ' not implemted');
+        self::Write("\033[2J", $channel);
     }
 
     /**
@@ -130,7 +130,7 @@ class Console
      */
     public static function SetCursorPosition(int $left, int $top, $channel = null): void
     {
-        self::Write("\033[<L>;<C>H", $channel);
+        self::Write("\033[{$top};{$left}H", $channel);
     }
 
     /**

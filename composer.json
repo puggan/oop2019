@@ -3,7 +3,8 @@
   "type": "project",
   "require": {
     "php": "^7.3",
-    "codedungeon/php-cli-colors": "^1.10"
+    "codedungeon/php-cli-colors": "^1.10",
+    "ext-json": "*"
   },
   "license": "MIT",
   "authors": [

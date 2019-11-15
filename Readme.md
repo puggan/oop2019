@@ -1,6 +1,8 @@
 # Exercises for programers - solutions
 for the unsolved Exercises see [henrikql/yh-oop19](https://github.com/henrikql/yh-oop19/tree/master/Week1).
 
+Solotions also avaible in [php](https://github.com/puggan/oop2019/tree/php).
+
 ## Exercises 1 [w1e01.cs](w1e01/w1e01.cs)
 Read integers from Console.  
 ![w1e01](w1e01/w1e01.png)

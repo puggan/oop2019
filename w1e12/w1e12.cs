@@ -34,7 +34,7 @@ namespace w1e12
                 print(part, 1, 1 + 5 * row, partColors[row]);
                 for (int col = 0; col < 4; col++)
                 {
-                    part = rotateCW(part);
+                    part = rotateCCW(part);
                     print(part, 6 + 5 * col, 1 + 5 * row, partColors[row]);
                 }
             }

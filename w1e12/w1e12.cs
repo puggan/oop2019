@@ -85,6 +85,7 @@ namespace w1e12
                     if(part[y, x] > 0) {
 			if(restart) {
                             Console.SetCursorPosition(2 * (xStart + x), yStart + y);
+                            restart = false;
                         }
                         Console.Write("  ");
                     } else {

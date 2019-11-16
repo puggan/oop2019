@@ -7,8 +7,6 @@ use Puggan\Oop2019\Console;
 use Puggan\Oop2019\TetrisBlock;
 
 require_once __DIR__ . '/../vendor/autoload.php';
-require_once __DIR__ . '/Bag.php';
-require_once __DIR__ . '/TetrisBlock.php';
 
 Console::Clear();
 $bag = new Bag(

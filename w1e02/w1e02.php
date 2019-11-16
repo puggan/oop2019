@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-require_once __DIR__ . '/../vendor/autoload.php';
-
 use Puggan\Oop2019\Console;
+
+require_once __DIR__ . '/../vendor/autoload.php';
 
 (static function () {
     $firstYear = Console::ReadInt('First year');

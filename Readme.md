@@ -54,3 +54,21 @@ Tetris Rotation.
 ## Exercises 13 [w1e13.cs](w1e13/w1e13.cs)
 Tetris Bag.  
 ![w1e13](w1e13/w1e13.png)
+
+# Week 2
+
+## Exercises 1 (Week 2) [w2e01.cs](w2e01/w2e01.cs)
+White Boxes
+![w2e01](w2e01/w2e01.png)
+
+## Exercises 2 (Week 2) [w2e02.cs](w2e02/w2e02.cs)
+Colored Boxes
+![w2e02](w2e02/w2e02.png)
+
+## Exercises 3 (Week 2) [w2e03.cs](w2e03/w2e03.cs)
+Centered Boxes
+![w2e03](w2e03/w2e03.png)
+
+## Exercises 4 (Week 2) [w2e04.cs](w2e04/w2e04.cs)
+Random Boxes
+![w2e04](w2e04/w2e04.png)

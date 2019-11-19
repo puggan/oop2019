@@ -1,4 +1,4 @@
-all: w1e01 w1e02 w1e03 w1e04 w1e05 w1e06 w1e07 w1e08 w1e09 w1e10 w1e11 w1e12 w1e13 w2e01 w2e02 w2e03
+all: w1e01 w1e02 w1e03 w1e04 w1e05 w1e06 w1e07 w1e08 w1e09 w1e10 w1e11 w1e12 w1e13 w2e01 w2e02 w2e03 w2e04
 
 w1e01: build/w1e01.exe
 build/w1e01.exe: w1e01/w1e01.cs
@@ -63,3 +63,7 @@ build/w2e02.exe: w2e02/w2e02.cs w2e01/Box.cs
 w2e03: build/w2e03.exe
 build/w2e03.exe: w2e03/w2e03.cs w2e03/BoxManager.cs w2e01/Box.cs
 	mcs w2e03/w2e03.cs w2e03/BoxManager.cs w2e01/Box.cs -out:build/w2e03.exe
+
+w2e04: build/w2e04.exe
+build/w2e04.exe: w2e04/w2e04.cs w2e01/Box.cs
+	mcs w2e04/w2e04.cs w2e01/Box.cs -out:build/w2e04.exe
